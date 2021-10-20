@@ -4,13 +4,9 @@ import "./header.css";
 import AddButton from "./AddButton";
 
 function Header({ title }) {
-    const onClick = () => {
-        alert("Click!");
-    };
     return (
         <header className="header">
             <h1 className="headerTitle"> {title} (by dkaimekin)</h1>
-            <AddButton onClick={onClick} />
         </header>
     );
 }

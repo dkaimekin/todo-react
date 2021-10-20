@@ -5,14 +5,17 @@ import TaskList from "./components/TaskList";
 import AddTask from "./components/AddTask";
 
 function App() {
+    // Function to add new task to the list
     const addTask = (task) => {
-        console.log(task);
+        const id = Math.floor(Math.random() * 10000) + 1;
+        const newTask = { id, ...task };
+        updateTasks([...tasks, newTask]);
     };
-
+    // Function to delete a task from UI
     const deleteTask = (id) => {
         updateTasks(tasks.filter((task) => task.id !== id));
     };
-
+    // Function to mark a task done (or mark undone)
     const changeTaskStatus = (id) => {
         updateTasks(
             tasks.map((task) =>
@@ -20,7 +23,7 @@ function App() {
             )
         );
     };
-
+    // Default use state of the app (data is stored in file, not in localstorage or somewhere else)
     const [tasks, updateTasks] = useState([
         {
             id: 0,
