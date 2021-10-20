@@ -1,16 +1,17 @@
-import React from 'react'
-import './addButton.css'
-import PropTypes from "prop-types"
+import React from "react";
+import "./addButton.css";
+import PropTypes from "prop-types";
 
-function AddButton({onClick}) {
+function AddButton({ onClick }) {
     return (
-        <button className = "btn" onClick = {onClick}>Add task</button>
-    )
+        <button className="btn" onClick={onClick}>
+            Add task
+        </button>
+    );
 }
 
 AddButton.propTypes = {
-    onClick: PropTypes.func
-}
+    onClick: PropTypes.func,
+};
 
-
-export default AddButton
+export default AddButton;

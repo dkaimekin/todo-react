@@ -1,3 +1,23 @@
 .task {
     margin: 20px 20px 20px 20px;
+    padding: 5px 5px 5px 5px;
+    border: 2px solid green;
+    border-radius: 20px;
+}
+
+.taskname {
+    text-transform: capitalize;
+}
+
+.taskdate {
+    font-style: italic;
+}
+
+.actionsList {
+    list-style-type: none;
+}
+
+.fa-icon-delete {
+    color: red;
+    cursor: pointer;
 }
