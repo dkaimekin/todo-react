@@ -5,12 +5,20 @@
     border-radius: 20px;
 }
 
+.task.isDone {
+    background-color: lightgreen;
+}
+
 .taskname {
     text-transform: capitalize;
 }
 
 .taskdate {
     font-style: italic;
+}
+
+.taskInfo {
+    margin-left: 40px;
 }
 
 .actionsList {
@@ -20,4 +28,49 @@
 .fa-icon-delete {
     color: red;
     cursor: pointer;
+}
+
+.table {
+    display: table;
+    margin: 0 0 0 0;
+}
+.actions {
+    list-style-type: none;
+}
+
+.action {
+    display: inline;
+    margin-right: 10px;
+}
+
+.delete {
+    padding: 20px 20px 20px 20px;
+    margin-right: 10px;
+    color: white;
+    border: 2px solid white;
+    border-radius: 20px;
+    background-color: red;
+}
+
+.delete:hover {
+    cursor: pointer;
+    background-color: white;
+    color: orangered;
+    border: 2px solid red;
+}
+
+.markdone {
+    padding: 20px 20px 20px 20px;
+    margin-right: 10px;
+    color: white;
+    border: 2px solid white;
+    border-radius: 20px;
+    background-color: green;
+}
+
+.markdone:hover {
+    cursor: pointer;
+    background-color: white;
+    color: green;
+    border: 2px solid greenyellow;
 }

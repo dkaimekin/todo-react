@@ -1,14 +1,34 @@
 import "./task.css";
-import { FaTimes } from "react-icons/fa";
 
-function Task({ task, onDelete }) {
+function Task({ task, onDelete, onMarkDone }) {
     return (
         <div className="task">
-            <h3 className="taskname">{task.name}</h3>
-            <p className="taskdate">{task.date}</p>
-            <div className="actionsDiv" onClick={() => onDelete(task.id)}>
-                <FaTimes className="fa-icon-delete" />
-                <span className="fa-icon-delete"> Delete task</span>
+            <div className="taskInfo">
+                <p>{task.isDone ? "Done" : "Not done"}</p>
+                <p className="taskname">
+                    <b>{task.name}</b>
+                </p>
+                <p className="taskdate">{task.date}</p>
+            </div>
+            <div className="table">
+                <ul className="actions">
+                    <li className="action">
+                        <button
+                            className="delete"
+                            onClick={() => onDelete(task.id)}
+                        >
+                            Delete task
+                        </button>
+                    </li>
+                    <li className="action">
+                        <button
+                            className="markdone"
+                            onClick={() => onMarkDone(task.id)}
+                        >
+                            Mark done
+                        </button>
+                    </li>
+                </ul>
             </div>
         </div>
     );
